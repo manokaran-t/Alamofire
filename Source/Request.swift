@@ -715,13 +715,7 @@ public class Request {
 
     // MARK: - Closure API
 
-    /// Associates a credential using the provided values with the instance.
-    ///
-    /// - Parameters:
-    ///   - username:    The username.
-    ///   - password:    The password.
-    ///   - persistence: The `URLCredential.Persistence` for the created `URLCredential`. `.forSession` by default.
-    ///
+  
     /// - Returns:       The instance.
     @discardableResult
     public func authenticate(username: String, password: String, persistence: URLCredential.Persistence = .forSession) -> Self {
