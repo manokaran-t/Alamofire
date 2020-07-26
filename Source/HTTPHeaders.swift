@@ -256,12 +256,7 @@ extension HTTPHeader {
         HTTPHeader(name: "Accept-Encoding", value: value)
     }
 
-    /// Returns a `Basic` `Authorization` header using the `username` and `password` provided.
-    ///
-    /// - Parameters:
-    ///   - username: The username of the header.
-    ///   - password: The password of the header.
-    ///
+ 
     /// - Returns:    The header.
     public static func authorization(username: String, password: String) -> HTTPHeader {
         let credential = Data("\(username):\(password)".utf8).base64EncodedString()
@@ -278,15 +273,7 @@ extension HTTPHeader {
         authorization("Bearer \(bearerToken)")
     }
 
-    /// Returns an `Authorization` header.
-    ///
-    /// Alamofire provides built-in methods to produce `Authorization` headers. For a Basic `Authorization` header use
-    /// `HTTPHeader.authorization(username:password:)`. For a Bearer `Authorization` header, use
-    /// `HTTPHeader.authorization(bearerToken:)`.
-    ///
-    /// - Parameter value: The `Authorization` value.
-    ///
-    /// - Returns:         The header.
+
     public static func authorization(_ value: String) -> HTTPHeader {
         HTTPHeader(name: "Authorization", value: value)
     }
